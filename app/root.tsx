@@ -1,4 +1,5 @@
 import {Analytics, getShopAnalytics, useNonce} from '@shopify/hydrogen';
+import {Analytics as VercelAnalytics} from '@vercel/analytics/react';
 import {type LoaderFunctionArgs} from '@shopify/remix-oxygen';
 import {
   Outlet,
@@ -169,6 +170,7 @@ export function Layout({children}: {children?: React.ReactNode}) {
         ) : (
           children
         )}
+        <VercelAnalytics />
         <ScrollRestoration nonce={nonce} />
         <Scripts nonce={nonce} />
       </body>
