@@ -14,7 +14,6 @@ import {
   SearchFormPredictive,
 } from '~/components/SearchFormPredictive';
 import {SearchResultsPredictive} from '~/components/SearchResultsPredictive';
-import { Analytics } from '@vercel/analytics/next';
 
 interface PageLayoutProps {
   cart: Promise<CartApiQueryFragment | null>;
